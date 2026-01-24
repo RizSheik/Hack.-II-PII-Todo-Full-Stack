@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git fetch --all --prune)",
+      "Bash(git -C /Volumes/KINGSTON/Python/Qater4/todo-app-phase2 rev-parse --git-dir)",
+      "Bash(mkdir:*)",
+      "Bash(./venv/bin/pip3 install:*)",
+      "Bash(./venv/bin/pip3 uninstall:*)",
+      "Bash(TOKEN_123=\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMjMsInN1YiI6IjEyMyIsImV4cCI6MTc2ODAzMTY0NH0.8_pt2sPyezaeS_-sR3vSXclVzRBp6O2EYeS1u4rdBog\")",
+      "Bash(python3:*)",
+      "Bash(echo \"\" echo \"3. Current Todo Count for User 123:\" curl -s http://localhost:8001/api/users/123/todos -H \"Authorization: Bearer $TOKEN_123\")",
+      "Skill(sp.specify)",
+      "Bash(.specify/scripts/bash/create-new-feature.sh --title \"Authentication & JWT Security Integration\" --stage spec --number 2 --short-name \"auth-jwt-integration\" --json)",
+      "Bash(find .specify -name *.sh -o -name *.ps1)",
+      "Bash(git checkout -b 2-auth-jwt-integration)",
+      "Bash(find:*)",
+      "Bash(cd:*)",
+      "Skill(sp.plan)",
+      "Bash(.specify/scripts/bash/create-phr.sh:*)",
+      "Bash(.specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks)",
+      "Bash(npm install:*)",
+      "Bash(npm run build)",
+      "Bash(timeout:*)",
+      "Bash(python:*)",
+      "Bash(.specify/scripts/bash/create-new-feature.sh:*)",
+      "Bash(npx shadcn@latest init:*)",
+      "Bash(npx shadcn@latest add:*)",
+      "Bash(curl:*)",
+      "Bash(npm run dev)",
+      "Bash(source:*)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill -9)",
+      "Bash(ls frontend/app/\\\\\\(protected\\\\\\)/dashboard)"
+    ]
+  }
+}
