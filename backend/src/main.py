@@ -33,13 +33,15 @@ app = FastAPI(
 )
 
 # Configure CORS middleware
+# Parse CORS origins from environment variable or use defaults
+cors_origins = settings.CORS_ORIGINS.split(",") if hasattr(settings, 'CORS_ORIGINS') and settings.CORS_ORIGINS else [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",  # Next.js development server
-        "http://127.0.0.1:3000",
-        # Add production origins here when deploying
-    ],
+    allow_origins=cors_origins,
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allow_headers=["*"],

@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: todo-backend-api
+    runtime: python
+    buildCommand: cd backend && pip install -r requirements.txt
+    startCommand: cd backend && uvicorn src.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: JWT_ALGORITHM
+        value: HS256
+      - key: JWT_EXPIRATION_HOURS
+        value: 24
+      - key: APP_ENV
+        value: production
+      - key: DEBUG
+        value: false
+      - key: LOG_LEVEL
+        value: info
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: 10000
