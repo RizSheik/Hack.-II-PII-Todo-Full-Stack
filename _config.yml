@@ -1,0 +1,22 @@
+# Jekyll configuration for GitHub Pages
+# Exclude the history directory which contains PHR files not meant for web rendering
+
+exclude:
+  - history/
+  - backend/
+  - specs/
+  - .claude/
+  - .specify/
+  - IMPLEMENTATION_STATUS.md
+  - TESTING.md
+  - CLAUDE.md
+  - ._README.md
+
+# Additional Jekyll settings
+markdown: kramdown
+highlighter: rouge
+theme: jekyll-theme-primer
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
