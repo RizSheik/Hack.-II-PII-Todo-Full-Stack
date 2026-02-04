@@ -108,8 +108,8 @@ async def signin(
 
     token = jwt.encode(
         payload,
-        settings.BETTER_AUTH_SECRET,
-        algorithm="HS256"
+        settings.effective_jwt_secret,
+        algorithm=settings.JWT_ALGORITHM
     )
 
     logger.info(f"User signed in: {user.email} (ID: {user.id})")

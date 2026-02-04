@@ -30,7 +30,11 @@
       "Bash(source:*)",
       "Bash(lsof:*)",
       "Bash(xargs kill -9)",
-      "Bash(ls frontend/app/\\\\\\(protected\\\\\\)/dashboard)"
+      "Bash(ls frontend/app/\\\\\\(protected\\\\\\)/dashboard)",
+      "Bash(node --version)",
+      "Bash(npx next dev)",
+      "Bash(pip install -r requirements.txt)",
+      "Bash(dir backendsrcmodels)"
     ]
   }
 }

@@ -59,8 +59,8 @@ async def verify_jwt_token(authorization: str = Header(None)) -> dict:
         # Decode and verify JWT
         payload = jwt.decode(
             token,
-            settings.BETTER_AUTH_SECRET,
-            algorithms=["HS256"]
+            settings.effective_jwt_secret,
+            algorithms=[settings.JWT_ALGORITHM]
         )
 
         # Validate required claims
