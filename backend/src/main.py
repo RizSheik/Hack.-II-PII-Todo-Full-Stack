@@ -37,6 +37,8 @@ app = FastAPI(
 cors_origins = settings.CORS_ORIGINS.split(",") if hasattr(settings, 'CORS_ORIGINS') and settings.CORS_ORIGINS else [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "https://rizsheik-todo-app.hf.space",  # Hugging Face deployment
+    "https://rizsheik-todo-app.hf.space/*"  # Allow all paths from HF
 ]
 
 app.add_middleware(
